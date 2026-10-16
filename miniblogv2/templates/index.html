@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniBlog</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main>
+        <h1>MiniBlog</h1>
+
+        <div class="busca">
+            <input type="text" id="termo"
+                   placeholder="Buscar usuários ou postagens">
+
+            <button onclick="buscarTudo(1)">Buscar</button>
+        </div>
+
+        <section>
+            <div id="resultadosUsuarios"></div>
+        </section>
+
+        <section>
+            <div id="resultadosPostagens"></div>
+
+            <div class="paginacao">
+                <span id="numeroPagina">Página 1</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
